@@ -1,0 +1,35 @@
+{
+	"hosts" : {
+		"subsonic": {
+			"internalUrl": "http://tsears-serv:4040"
+		},
+		"music": {
+			"internalUrl" : "http://localhost:5000",
+			"https" : true,
+			"cert" : {
+				"privateKey" : "music/music.key",
+				"certificate" : "music/music.crt",
+				"authorities" : [
+					"sub.class1.server.ca.pem"
+				]
+			}
+		}
+	},
+	"aliases" : {
+		"music.tsears.org" : {
+			"aliasFor" : "music"
+		}
+	},
+	"https" : {
+		"__comment" : "Global certificates for https module... can be self-signed for all it matters...",
+		"port": 443,
+		"certificateFolder" : "/etc/tsProxy/ssl",
+		"cert" : {
+			"privateKey" : "app.key",
+			"certificate" : "app.crt"
+		}	
+	},
+	"notFound" : "notFound.html",
+	"port" : 80
+}
+

@@ -1,0 +1,11 @@
+{
+	"hosts" : {
+
+	},
+	"aliases" : {
+		"foo" : {
+			"aliasFor" : "bar"
+		}
+	}
+}
+
